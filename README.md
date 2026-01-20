@@ -40,3 +40,9 @@ uv run main.py
 ## Tools available for the model:
 
 - **Write files:** To save the markdown in the destination folder.
+
+## Example of files in the recipes_source folder:
+├── 2015-07-31 Esfirra
+│   ├── Esfirra 001.jpg
+│   └── Esfirra 002.jpg
+└── bife a milanesa.png
