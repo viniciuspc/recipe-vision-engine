@@ -1,3 +1,5 @@
+[tool.pytest.ini_options]
+pythonpath = "."
 [project]
 name = "recipe-vision-engine"
 version = "0.1.0"
