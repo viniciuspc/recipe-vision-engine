@@ -46,3 +46,6 @@ uv run main.py
 │   ├── Esfirra 001.jpg
 │   └── Esfirra 002.jpg
 └── bife a milanesa.png
+
+## Improvement Ideas
+- Cost estimation: I want to know how much the convertio from image to Markdown would cost, before the convention. For me to decide if I should remove some recipes for convention.
