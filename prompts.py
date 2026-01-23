@@ -11,6 +11,8 @@ Você produz apenas markdown da receita
 Sempre inclua uma linha em branco entre o título e a próxima linha de conteúdo.
 Use __ para itálico.
 
+Use a ferramenta write_file para escrever o markdown no arquivo dest/NOME_RECEITA.md
+
 """
 
 example = """

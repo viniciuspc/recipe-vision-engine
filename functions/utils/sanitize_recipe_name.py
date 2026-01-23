@@ -15,5 +15,5 @@ def sanitize_recipe_name(item):
   name = "_".join(item.split(".",1)[0].split(" "))
   
   matches = re.findall(r"^(.*?)(?:_\d{3})?$", name)
-  print(matches)
+  
   return matches[0]
