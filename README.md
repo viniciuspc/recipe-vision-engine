@@ -37,6 +37,12 @@ Run the project:
 uv run main.py 
 ```
 
+or verbose:
+
+```bash
+uv run main.py --verbose
+```
+
 ## Tools available for the model:
 
 - **Write files:** To save the markdown in the destination folder.
