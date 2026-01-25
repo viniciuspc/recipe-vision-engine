@@ -1,4 +1,8 @@
+import os
 import json
+from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 from google.genai import types
 import time
 
@@ -39,7 +43,7 @@ def prepare_and_upload_input_file(client):
   
 def monitor_job_status(client, job_name):
   print(f"Polling status for job: {job_name}")
-
+  # job_name = batches/5sgjl9mg5f7po2uy7z8mkdbzrq7mbtt19b0z
   # Poll the job status until it's completed.
   while True:
       batch_job = client.batches.get(name=job_name)
@@ -74,7 +78,13 @@ def retrive_parse_results(client, batch_job):
   else:
       print(f"Job did not succeed. Final state: {batch_job.state.name}")
 
-def call_ai_batch(client):
+def call_ai_batch():
+  
+  load_dotenv()
+  api_key = os.environ.get("GEMINI_API_KEY")
+
+  client = genai.Client(api_key=api_key)
+
   job_name = prepare_and_upload_input_file(client)
   #job_name = create_batch_job(client, uploaded_batch_requests)
   batch_job = monitor_job_status(client, job_name)

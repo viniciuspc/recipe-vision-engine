@@ -6,17 +6,28 @@ from google.genai import types
 from google.genai.errors import ClientError
 from prompts import system_prompt
 from functions.tools.call_function import available_functions, call_function
+from functions.gemini.exponetial_backoff import call_with_retry
 
-def ai_agent_loop(client, name, contents, verbose):
-  for _ in range(20):
-      try:
-          generated_content = client.models.generate_content(
-              model="gemini-3-flash-preview",
+MODEL_ID = "gemini-3-flash-preview"
+
+def generate_content(client, contents):
+    return client.models.generate_content(
+              model=MODEL_ID,
               contents=contents,
               config=types.GenerateContentConfig(
                   tools=[available_functions], system_instruction=system_prompt
               )
           )
+
+
+def ai_agent_loop(client, name, contents, verbose):
+  for _ in range(20):
+      try:
+          generate_content_args = {
+              "client": client,
+              "contents": contents
+          }
+          generated_content = call_with_retry(generate_content, generate_content_args)
           
           cadidates = generated_content.candidates
           if cadidates:

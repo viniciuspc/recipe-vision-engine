@@ -2,6 +2,7 @@ import os
 import argparse
 from functions.utils.get_files_paths import get_files_paths
 from functions.gemini.call_ai_agent import call_ai_agent
+from functions.gemini.call_ai_batch import call_ai_batch
 
 parser = argparse.ArgumentParser(description="Recipe-vision-engine")
 parser.add_argument("--verbose", action="store_true", help="Enable verbose output")
@@ -21,7 +22,7 @@ def main():
     
     print(f"Will generate {len(dir_name_files)} recipes.")
     
-    # call_ai_batch(client)
+    # call_ai_batch()
     
     for name in dir_name_files:
         files = dir_name_files[name]
