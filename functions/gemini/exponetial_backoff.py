@@ -2,7 +2,7 @@ import random
 import time
 from google.genai.errors import ServerError
 
-BASE_DELAY = 30      # seconds
+BASE_DELAY = 10      # seconds
 CAP = 300            # seconds
 MAX_RETRIES = 5
 
