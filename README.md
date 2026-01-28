@@ -6,6 +6,9 @@ Each recipe can be provided as a single .jpg image or as a folder containing mul
 
 The generated Markdown can then be passed to a Markdown-to-HTML parser to produce a web page with the available recipes.
 
+I used the gemini-3-flash-preview with good acuracy results, it took about 1 hour to process 83 recipes, and the costs was about 0,70 USD
+The recipes was in Brazilian Portuguese, this is way the system prompt is in brazilian portuguese too.
+
 ## Prerequesites
 
 - Python 3.10 + installed

@@ -12,7 +12,7 @@ def sanitize_recipe_name(item):
   Returns:
       string: The sanitized name of the recipe file.
   """
-  name = "_".join(item.split(".",1)[0].split(" "))
+  name = "_".join(item.lower().split(".",1)[0].split(" "))
   
   matches = re.findall(r"^(.*?)(?:_\d{3})?$", name)
   
