@@ -7,7 +7,11 @@ Each recipe can be provided as a single .jpg image or as a folder containing mul
 The generated Markdown can then be passed to a Markdown-to-HTML parser to produce a web page with the available recipes.
 
 I used the gemini-3-flash-preview with good acuracy results, it took about 1 hour to process 83 recipes, and the costs was about 0,70 USD
-The recipes was in Brazilian Portuguese, this is way the system prompt is in brazilian portuguese too.
+The recipes and system prompt are in Brazilian Portuguese.
+
+I used [hugo](https://gohugo.io/) to generate the static web-page.
+Repository for the static website: [receitas-websit](https://github.com/viniciuspc/receitas-website)
+Live website: [Receitas da Vó](https://receitas.viniciuspc.com/)
 
 ## Prerequesites
 
@@ -51,6 +55,7 @@ uv run main.py --verbose
 - **Write files:** To save the markdown in the destination folder.
 
 ## Example of files in the recipes_source folder:
+
 ├── 2015-07-31 Esfirra
 │   ├── Esfirra 001.jpg
 │   └── Esfirra 002.jpg
