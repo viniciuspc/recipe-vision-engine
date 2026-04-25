@@ -62,4 +62,4 @@ uv run main.py --verbose
 └── bife a milanesa.png
 
 ## Improvement Ideas
-- Cost estimation: I want to know how much the convertio from image to Markdown would cost, before the convention. For me to decide if I should remove some recipes for convention.
+- Cost estimation: I want to know how much the convertion from image to markdown would cost, before spending tokens. For me to decide if I should remove some recipes before running the convertion.
