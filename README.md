@@ -10,7 +10,7 @@ I used the gemini-3-flash-preview with good acuracy results, it took about 1 hou
 The recipes and system prompt are in Brazilian Portuguese.
 
 I used [hugo](https://gohugo.io/) to generate the static web-page.
-Repository for the static website: [receitas-websit](https://github.com/viniciuspc/receitas-website)
+Repository for the static website: [receitas-website](https://github.com/viniciuspc/receitas-website)
 Live website: [Receitas da Vó](https://receitas.viniciuspc.com/)
 
 ## Prerequesites
@@ -63,3 +63,4 @@ uv run main.py --verbose
 
 ## Improvement Ideas
 - Cost estimation: I want to know how much the convertion from image to markdown would cost, before spending tokens. For me to decide if I should remove some recipes before running the convertion.
+- Add system prompt in English for a broader user base
